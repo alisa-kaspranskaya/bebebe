@@ -3,8 +3,6 @@
   --text: #111;
 }
 
-/* ===== Base ===== */
-
 * {
   box-sizing: border-box;
 }
@@ -21,12 +19,10 @@ body {
   line-height: 1.6;
 }
 
-/* ===== Header / Navigation ===== */
-
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
+  z-index: 100;
   background: var(--bg);
   padding: 14px 18px;
   border-bottom: 1px solid #e5e5e5;
@@ -38,41 +34,27 @@ header {
   gap: 8px;
 }
 
-/* Общий стиль кнопок */
-
 .navigation a {
   text-decoration: none;
   font-size: 14px;
   padding: 8px 14px;
   border-radius: 999px;
   border: 3px solid transparent;
-  background:
-    linear-gradient(var(--bg), var(--bg)) padding-box,
-    linear-gradient(90deg, #ff6b00, #ff8a33) border-box;
   color: #111;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.1s ease;
 }
-
-/* Hover */
 
 .navigation a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
-
-/* Active при клике */
 
 .navigation a:active {
   transform: translateY(0);
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
-
-/* ===== Разные цвета рамок ===== */
 
 .navigation a {
   border-color: darkseagreen;
 }
-
 
 main {
   max-width: 1000px;
@@ -85,7 +67,7 @@ section {
   border-radius: 10px;
   padding: 28px;
   margin-bottom: 40px;
-  scroll-margin-top: 110px; /* чтобы якорь не уезжал под header */
+  scroll-margin-top: 110px;
 }
 
 .page-title {
@@ -94,7 +76,8 @@ section {
 }
 
 section p {
-  white-space: pre-line; /* сохраняет переносы строк из HTML */
+  white-space: pre-line;
 }
+
 
 
